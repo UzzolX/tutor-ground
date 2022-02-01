@@ -1,99 +1,149 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <title>Laravel</title>
+<head>
+    <title>Tutor Ground</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    @include('partials.head')
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+</head>
 
-            .full-height {
-                height: 100vh;
-            }
+<body>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <div class="site-wrap">
 
-            .position-ref {
-                position: relative;
-            }
+        @include('partials.nav')
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+        @include('partials.hero')
 
-            .content {
-                text-align: center;
-            }
 
-            .title {
-                font-size: 84px;
-            }
+        @include('partials.category')
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <div class="site-section bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+                            <h2>Recent Tution</h2>
+                        </div>
+                        <div class="rounded border jobs-wrap">
+                            {{-- @foreach($jobs as $job) --}}
+                            <a href="" class="job-item d-block d-md-flex align-items-center  border-bottom fulltime">
+                                <div class="company-logo blank-logo text-center text-md-left pl-3">
+                                    {{-- @if(!empty($job->company->logo))
+                                    <img src="{{asset('uploads/logo')}}/{{$job->company->logo}}" alt="Image" class="img-fluid mx-auto">
+                                    @else
+                                    <img src="{{asset('avatar/man.jpg')}}" alt="Image" class="img-fluid mx-auto">
+                                    @endif --}}
+                                </div>
+                                <div class="job-details h-100">
+                                    <div class="p-3 align-self-center">
+                                        <h3>C++ Teacher Needed</h3>
+                                        <div class="d-block d-lg-flex">
+                                            <div class="mr-3"><span class="icon-suitcase mr-1"></span>Programming</div>
+                                            <div class="mr-3"><span class="icon-room mr-1"></span>Zindabazar</div>
+                                            <div class="mr-3"><span class="icon-money mr-1"></span>4000tk</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-category align-self-center">
+                                    {{-- @if($job->type=='fulltime')
+                                    <div class="p-3">
+                                        <span class="text-info p-2 rounded border border-info">{{$job->type}}</span>
+                                    </div>
+                                    @elseif($job->type=='parttime')
+                                    <div class="p-3">
+                                        <span class="text-danger p-2 rounded border border-danger">{{$job->type}}</span>
+                                    </div>
+                                    @else
+                                    <div class="p-3">
+                                        <span class="text-warning p-2 rounded border border-warning">{{$job->type}}</span>
+                                    </div>
+                                    @endif --}}
+                                </div>
+                            </a>
+                            {{-- @endforeach --}}
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+                        </div>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                        <div class="col-md-12 text-center mt-5">
+                            <a href="" class="btn btn-primary rounded py-3 px-5"><span class="icon-plus-circle"></span> Show More Tutions</a>
+                        </div>
+                    </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
         </div>
-    </body>
+
+
+        <div class="site-blocks-cover overlay inner-page" style="background-image: url('frontend-assets/external/images/hero_1.jpg');" data-aos="fade" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-6 text-center" data-aos="fade">
+                        <h1 class="h3 mb-0">Tutions and Teachers</h1>
+                        <p class="h3 text-white mb-5">Are Easier To Find</p>
+                        <p><a href="#" class="btn btn-outline-warning py-3 px-4">Find Tutions</a> <a href="#" class="btn btn-warning py-3 px-4">Find Teacher</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="site-section site-block-feature bg-light">
+            <div class="container">
+
+                <div class="text-center mb-5 section-heading">
+                    <h2>Why Choose Us</h2>
+                </div>
+
+                <div class="d-block d-md-flex border-bottom">
+                    <div class="text-center p-4 item border-right" data-aos="flip-left">
+                        <span class="flaticon-worker display-3 mb-3 d-block text-primary"></span>
+                        <h2 class="h4">More Tutions Every Day</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+                        <p><a href="#">Read More <span class="icon-arrow-right small"></span></a></p>
+                    </div>
+                    <div class="text-center p-4 item" data-aos="flip-left" data-aos-delay="700">
+                        <span class="flaticon-wrench display-3 mb-3 d-block text-primary"></span>
+                        <h2 class="h4">Certified Teacher</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+                        <p><a href="#">Read More <span class="icon-arrow-right small"></span></a></p>
+                    </div>
+                </div>
+                <div class="d-block d-md-flex">
+                    <div class="text-center p-4 item border-right" data-aos="flip-left" data-aos-delay="700">
+                        <span class="flaticon-stethoscope display-3 mb-3 d-block text-primary"></span>
+                        <h2 class="h4">Big Categories</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+                        <p><a href="#">Read More <span class="icon-arrow-right small"></span></a></p>
+                    </div>
+                    <div class="text-center p-4 item" data-aos="flip-left" data-aos-delay="700">
+                        <span class="flaticon-calculator display-3 mb-3 d-block text-primary"></span>
+                        <h2 class="h4">Easy to Use</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reprehenderit explicabo quos fugit vitae dolorum.</p>
+                        <p><a href="#">Read More <span class="icon-arrow-right small"></span></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        @include('partials.blog')
+
+
+
+        @include('partials.footer')
+
+    </div>
+
+
+</body>
+
 </html>

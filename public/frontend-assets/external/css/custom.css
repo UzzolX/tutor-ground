@@ -1,0 +1,51 @@
+/*custom*/
+
+.serach-button input {
+    background: #fc8c19;
+    border: 0px;
+}
+
+.serach-button input {
+    background: #0e5fd8;
+    border: 0px;
+}
+
+.alljobserach {
+    margin: 50px 0 0px 0;
+}
+
+.mr-3 span {
+    color: #27ceb3;
+}
+
+span.text-info.p-2.rounded.border.border-info {
+    background: #28a745;
+    font-weight: 500;
+    color: white !important;
+    border: 1px solid #28a745 !important;
+}
+
+.fulltime {
+    border-left: 3px solid #28a745 !important;
+}
+
+h2.mb-0.site-logo.animated.jello a img {
+    width: 100%;
+}
+
+input.btn.btn-search.btn-primary.btn-block {
+    background: #00b372;
+    border: 1px solid #00b372;
+}
+span.text-info.p-2.rounded.border.border-info {
+    background: tomato;
+    font-weight: 500;
+    color: white !important;
+    border: 1px solid #28a745 !important;
+}
+.text-danger {
+    color: #c7c232 !important;
+}
+.border-danger {
+    border-color: #dacc1d !important;
+}
