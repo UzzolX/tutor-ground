@@ -11,7 +11,7 @@
       <div class="site-section bg-light">
         <div class="container">
           <div class="row">
-            <h1>Employer Registration</h1>
+            <h1>Student Registration</h1>
             @if(Session::has('message'))
             <div class="alert alert-success">
               {{Session::get('message')}}
@@ -20,20 +20,20 @@
 
             <div class="col-md-12 col-lg-8 mb-5">
 
-              <form method="POST" action="" class="p-5 bg-white">
+              <form method="POST" action="{{ route('stu.register') }}" class="p-5 bg-white">
                 @csrf
 
-                <input type="hidden" value="employer" name="user_type">
+                <input type="hidden" value="student" name="user_type">
                 <div class="form-group row">
 
-                  <div class="col-md-12">Company name</div>
+                  <div class="col-md-12">Name</div>
 
                   <div class="col-md-12">
-                    <input id="name" type="text" placeholder="Company name" class="form-control{{ $errors->has('cname') ? ' is-invalid' : '' }}" name="cname" value="{{ old('cname') }}" required autofocus>
+                    <input id="name" type="text" placeholder="Your name" class="form-control{{ $errors->has('sname') ? ' is-invalid' : '' }}" name="sname" value="{{ old('sname') }}" required autofocus>
 
-                    @if ($errors->has('cname'))
+                    @if ($errors->has('sname'))
                     <span class="invalid-feedback" role="alert">
-                      <strong>{{ $errors->first('cname') }}</strong>
+                      <strong>{{ $errors->first('sname') }}</strong>
                     </span>
                     @endif
                   </div>
@@ -83,7 +83,7 @@
 
                 <div class="row form-group">
                   <div class="col-md-12">
-                    <input type="submit" value="Register as Employer" class="btn btn-primary  py-2 px-5">
+                    <input type="submit" value="Register as Student" class="btn btn-primary  py-2 px-5">
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@
               <div class="p-4 mb-3 bg-white">
                 <h3 class="h5 text-black mb-3">More Info</h3>
                 <p>After crating an account you need to verify your email to able to login. A verification link will be sent to your email.</p>
-                <p><a href="#" class="btn btn-primary  py-2 px-4">Learn More</a></p>
+                {{-- <p><a href="#" class="btn btn-primary  py-2 px-4">Learn More</a></p> --}}
               </div>
             </div>
           </div>

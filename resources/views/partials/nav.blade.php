@@ -26,7 +26,7 @@
 
                                    
                                     
-                                    <li><a href="">Student</a></li>
+                                    <li><a href="{{ route('student.register') }}">Student</a></li>
                                     <li><a href="">Teacher</a></li>
                                     
 

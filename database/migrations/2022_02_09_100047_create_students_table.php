@@ -17,11 +17,11 @@ class CreateStudentsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->string('sname');
-            $table->string('address');
-            $table->string('phone');
-            $table->string('photo');
-            $table->string('description');
-            $table->string('slug');
+            $table->string('address')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('description')->nullable();
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }

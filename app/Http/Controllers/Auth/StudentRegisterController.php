@@ -13,13 +13,8 @@ class StudentRegisterController extends Controller
     public function studentRegister(Request $request)
     {
 
-        $this->validate($request, [
-            'tname' => 'required|string|max:60',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed'
-        ]);
-
         $user =  User::create([
+            'name' => request('sname'),
             'email' => request('email'),
             'password' => Hash::make(request('password')),
             'user_type' => request('user_type'),
@@ -30,8 +25,6 @@ class StudentRegisterController extends Controller
             'slug' => str_slug(request('sname'))
 
         ]);
-        $user->sendEmailVerificationNotification();
-
-        return redirect()->back()->with('message', 'A verification link is sent to your email. Please follow the link to verify it');
+        return redirect()->back()->with('message', 'Sucess');
     }
 }
