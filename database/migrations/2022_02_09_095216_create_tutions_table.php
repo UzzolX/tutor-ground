@@ -16,7 +16,7 @@ class CreateTutionsTable extends Migration
         Schema::create('tutions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('user_id');
-            $table->string('teacher_id');
+            $table->string('student_id');
             $table->string('title');
             $table->text('description');
             $table->string('slug');
@@ -24,7 +24,7 @@ class CreateTutionsTable extends Migration
             $table->integer('category_id');
             $table->string('class');
             $table->string('address');
-            $table->string('type');
+            $table->string('location');
             $table->string('number_of_student');
             $table->string('group');
             $table->string('gender');

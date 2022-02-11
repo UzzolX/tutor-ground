@@ -4,7 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Auth;
-class Employee
+
+class Student
 {
     /**
      * Handle an incoming request.
@@ -15,12 +16,10 @@ class Employee
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check()&&Auth::user()->user_type== 'student'){
+        if (Auth::check() && Auth::user()->user_type == 'student') {
             return $next($request);
-    
-        
-        }else{
-             return redirect('/');
+        } else {
+            return redirect('/');
         }
     }
 }

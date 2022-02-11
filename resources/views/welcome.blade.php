@@ -30,8 +30,8 @@
                             <h2>Recent Tution</h2>
                         </div>
                         <div class="rounded border jobs-wrap">
-                            {{-- @foreach($jobs as $job) --}}
-                            <a href="" class="job-item d-block d-md-flex align-items-center  border-bottom fulltime">
+                            @foreach($tutions as $tution)
+                            <a href="{{route('tutions.show',[$tution->id,$tution->slug])}}" class="job-item d-block d-md-flex align-items-center  border-bottom fulltime">
                                 <div class="company-logo blank-logo text-center text-md-left pl-3">
                                     {{-- @if(!empty($job->company->logo))
                                     <img src="{{asset('uploads/logo')}}/{{$job->company->logo}}" alt="Image" class="img-fluid mx-auto">
@@ -41,11 +41,11 @@
                                 </div>
                                 <div class="job-details h-100">
                                     <div class="p-3 align-self-center">
-                                        <h3>C++ Teacher Needed</h3>
+                                        <h3>{{$tution->title}}</h3>
                                         <div class="d-block d-lg-flex">
-                                            <div class="mr-3"><span class="icon-suitcase mr-1"></span>Programming</div>
-                                            <div class="mr-3"><span class="icon-room mr-1"></span>Zindabazar</div>
-                                            <div class="mr-3"><span class="icon-money mr-1"></span>4000tk</div>
+                                            <div class="mr-3"><span class="icon-suitcase mr-1"></span>{{$tution->title}}</div>
+                                            <div class="mr-3"><span class="icon-room mr-1"></span>{{$tution->location}}</div>
+                                            <div class="mr-3"><span class="icon-money mr-1"></span>{{$tution->salary}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -65,12 +65,12 @@
                                     @endif --}}
                                 </div>
                             </a>
-                            {{-- @endforeach --}}
+                            @endforeach
 
                         </div>
 
                         <div class="col-md-12 text-center mt-5">
-                            <a href="" class="btn btn-primary rounded py-3 px-5"><span class="icon-plus-circle"></span> Show More Tutions</a>
+                            <a href="{{route('alltutions')}}" class="btn btn-primary rounded py-3 px-5"><span class="icon-plus-circle"></span> Show More Tutions</a>
                         </div>
                     </div>
 

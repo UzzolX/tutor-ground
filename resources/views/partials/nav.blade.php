@@ -27,12 +27,12 @@
                                    
                                     
                                     <li><a href="{{ route('student.register') }}">Student</a></li>
-                                    <li><a href="">Teacher</a></li>
+                                    <li><a href="{{ route('register') }}">Teacher</a></li>
                                     
 
                                     <li><a href="">Contact</a></li>
 
-                                    <li><a href="">All Tutions</a></li>
+                                    <li><a href="{{ route('alltutions') }}">All Tutions</a></li>
                                     @if(!Auth::check())
                                     <li><a href="{{ route('login') }}"><span class="bg-primary text-white py-3 px-4 rounded"><span></span>Login</span></a></li>
                                     @endif
