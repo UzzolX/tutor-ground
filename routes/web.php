@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Teacher view
+Route::view('student/register', 'auth.student-register')->name('student.register');
+Route::post('student/register', 'StudentRegisterController@studentRegister')->name('stu.register');

@@ -26,8 +26,8 @@
 
                                    
                                     
-                                    <li><a href="">For Student</a></li>
-                                    <li><a href="">For Teacher</a></li>
+                                    <li><a href="">Student</a></li>
+                                    <li><a href="">Teacher</a></li>
                                     
 
                                     <li><a href="">Contact</a></li>
