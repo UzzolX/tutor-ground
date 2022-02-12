@@ -74,15 +74,15 @@
         @foreach($tutions as $tution)
 
         <a href="{{route('tutions.show',[$tution->id,$tution->slug])}}" class="job-item d-block d-md-flex align-items-center  border-bottom @if($tution->type=='parttime') partime @elseif($tution->type=='fulltime')fulltime @else freelance   @endif;">
-          <div class="company-logo blank-logo text-center text-md-left pl-3">
+          {{-- <div class="company-logo blank-logo text-center text-md-left pl-3">
             <img src="{{asset('uploads/logo')}}/{{$tution->student->logo}}" alt="Image" class="img-fluid mx-auto">
-          </div>
+          </div> --}}
           <div class="job-details h-100">
             <div class="p-3 align-self-center">
-              <h3>{{$tution->position}}</h3>
+              <h3>{{$tution->title}}</h3>
               <div class="d-block d-lg-flex">
                 <div class="mr-3"><span class="icon-suitcase mr-1"></span> {{$tution->student->sname}}</div>
-                <div class="mr-3"><span class="icon-room mr-1"></span> {{str_limit($tution->address,20)}}</div>
+                <div class="mr-3"><span class="icon-room mr-1"></span> {{str_limit($tution->location,20)}}</div>
                 <div><span class="icon-money mr-1"></span>{{$tution->salary}}</div>
                 <div>&nbsp;<span class="fa fa-clock-o mr-1"></span>{{$tution->created_at->diffForHumans()}}</div>
               </div>
